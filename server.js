@@ -10,11 +10,9 @@ app.use(express.json());
 app.use(routes); 
 
 
-//atlas url
-const url = process.env. DEV_DB_URI;
-
-//mongodb connect
-mongoose.connect(url)
+// url
+const url = process.env.DEV_DB_URL;
+mongoose.connect("mongodb://127.0.0.1/password")
     .then(() => {
         console.log("connected to  mongodb");
     })
