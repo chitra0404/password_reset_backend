@@ -12,7 +12,7 @@ app.use(routes);
 
 // url
 const url = process.env.DEV_DB_URL;
-mongoose.connect("mongodb+srv://chitrasuresh0404:Chitra0415@cluster0.thyteob.mongodb.net/password")
+mongoose.connect("mongodb://127.0.0.1/passworddb")
     .then(() => {
         console.log("connected to  mongodb");
     })
