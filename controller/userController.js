@@ -70,7 +70,7 @@ module.exports.resetPassword = async (req, res) => {
 
     const sendMail = async () => {
         const info = await transporter.sendMail({
-            from: `"Boobathi Thillan" <${Email_Id}>`,
+            from: `"chitra" <${Email_Id}>`,
             to: user.email,
             subject: "Reset Password",
             text: link
