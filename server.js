@@ -12,7 +12,7 @@ app.use(routes);
 
 // url
 const url = process.env.DEV_DB_URL;
-mongoose.connect("mongodb://127.0.0.1/passworddb", {useNewUrlParser: "true",
+mongoose.connect("mongodb://127.0.0.1:27017/passworddb", {useNewUrlParser: "true",
 useUnifiedTopology: "true"})
     .then(() => {
         console.log("connected to  mongodb");
