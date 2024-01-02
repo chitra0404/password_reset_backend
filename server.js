@@ -1,5 +1,5 @@
 //Modules and Middlewars
-require('dotenv').config()
+
 const express=require('express');
 const mongoose=require('mongoose');
 const app=express();
@@ -8,11 +8,11 @@ const routes=require('./route/userRoute')
 app.use(cors());
 app.use(express.json());
 app.use(routes); 
-
+require('dotenv').config()
 
 // url
-const url = process.env.DEV_DB_URL;
-mongoose.connect("mongodb+srv://chitrasuresh0404:Chitra0415@cluster0.thyteob.mongodb.net/passworddb", {useNewUrlParser: "true",
+const url = process.env.ATLAS_URL;
+mongoose.connect(url, {useNewUrlParser: "true",
 useUnifiedTopology: "true"})
     .then(() => {
         console.log("connected to  mongodb");
