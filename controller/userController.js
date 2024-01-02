@@ -51,7 +51,7 @@ module.exports.resetPassword = async (req, res) => {
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
 
-    
+    const link=`https://password-reset-fe-xi.vercel.app/${randomString}`
 
     user.resettoken = randomString;
     const updated = await UserModel.findByIdAndUpdate(user._id, user);
